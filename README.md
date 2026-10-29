@@ -66,15 +66,15 @@ Store API keys and other secrets in environment variables. Never commit `.env` o
 
 If package.json defines a start script for server.js, run:
 
-    ```bash
-    npm start
-    ```
+```
+npm start
+```
 
 Otherwise, start the server directly:
 
-    ```bash
-    node server.js
-    ```
+```
+node server.js
+```
 
 Open `http://localhost:3000` in your browser, provided the Express server is configured to serve the frontend files on that port.
 
