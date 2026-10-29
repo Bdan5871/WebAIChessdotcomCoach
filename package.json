@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "@google/genai": "^2.31.0",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0"
+  },
+  "name": "webaichessdotcomcoach",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bdan5871/WebAIChessdotcomCoach.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Bdan5871/WebAIChessdotcomCoach/issues"
+  },
+  "homepage": "https://github.com/Bdan5871/WebAIChessdotcomCoach#readme"
+}

@@ -1,0 +1,326 @@
+
+body 
+{
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f3f5f9;
+    color: #202938;
+}
+
+h1 
+{
+    color: #2457a7;
+}
+
+input, button 
+{
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+input 
+{
+    border: 1px solid #ccc;
+    width: min(60%, 350px);
+}
+
+button 
+{
+    background: #2457a7;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover 
+{
+    background: #183e7a;
+}
+
+#results, #games 
+{
+    margin-top: 25px;
+}
+
+.card, .game 
+{
+    background: white;
+    padding: 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0001;
+}
+
+img 
+{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.rating 
+{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.game a 
+{
+    color: #2457a7;
+}
+
+#status 
+{
+    color: #555;
+}
+
+
+#coachStats {
+    margin-top: 24px;
+}
+
+#coachStats .stat-group {
+    background: #f4f6f8;
+    color: #222;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 12px 0;
+}
+
+#coachStats h3 {
+    margin-top: 24px;
+}
+
+#coachStats p {
+    line-height: 1.5;
+}
+
+#coachStats button {
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+#coachStats pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 12px;
+    background: #f4f6f8;
+    color: #222;
+    border-radius: 8px;
+}
+
+.analysis-section,
+.chat-section {
+    margin-top: 28px;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #dce3e8;
+    border-radius: 14px;
+    color: #25313c;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.analysis-section h2,
+.chat-section h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 1.45rem;
+}
+
+.report-content {
+    font-size: 1rem;
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+}
+
+.report-content h1,
+.report-content h2,
+.report-content h3 {
+    color: #1d4d3b;
+    line-height: 1.35;
+    margin-top: 28px;
+    margin-bottom: 10px;
+}
+
+.report-content h1 {
+    font-size: 1.65rem;
+}
+
+.report-content h2 {
+    font-size: 1.35rem;
+    border-bottom: 1px solid #e2e8e5;
+    padding-bottom: 8px;
+}
+
+.report-content h3 {
+    font-size: 1.1rem;
+}
+
+.report-content p {
+    margin: 10px 0 16px;
+}
+
+.report-content ul,
+.report-content ol {
+    padding-left: 26px;
+    margin: 10px 0 20px;
+}
+
+.report-content li {
+    margin-bottom: 8px;
+    padding-left: 3px;
+}
+
+.report-content strong {
+    color: #193c30;
+}
+
+.report-content table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    margin: 16px 0 24px;
+}
+
+.report-content th,
+.report-content td {
+    padding: 11px 13px;
+    text-align: left;
+    border: 1px solid #dce3e8;
+    min-width: 100px;
+}
+
+.report-content th {
+    background: #edf4f0;
+}
+
+.report-content blockquote {
+    margin: 16px 0;
+    padding: 10px 16px;
+    border-left: 4px solid #46856b;
+    background: #f4f8f5;
+}
+
+.report-content a {
+    color: #176b50;
+    overflow-wrap: anywhere;
+}
+
+.chat-description {
+    color: #65727d;
+    line-height: 1.6;
+}
+
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.chat-placeholder {
+    color: #7b8790;
+    font-style: italic;
+}
+
+.chat-message {
+    padding: 14px 17px;
+    border-radius: 12px;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+}
+
+.chat-message.user {
+    align-self: flex-end;
+    max-width: 85%;
+    background: #e6f2eb;
+}
+
+.chat-message.assistant {
+    align-self: stretch;
+    background: #f3f5f7;
+}
+
+.chat-message .message-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #50605a;
+}
+
+.chat-message p:first-child {
+    margin-top: 0;
+}
+
+.chat-message p:last-child {
+    margin-bottom: 0;
+}
+
+.chat-message ul,
+.chat-message ol {
+    padding-left: 24px;
+}
+
+.chat-form textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    border: 1px solid #cbd5dc;
+    border-radius: 10px;
+    font: inherit;
+    resize: vertical;
+}
+
+.chat-form textarea:focus {
+    outline: 2px solid #46856b;
+    outline-offset: 2px;
+}
+
+.chat-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.chat-actions button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #246b4d;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.chat-actions button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+#chatStatus {
+    font-size: 0.9rem;
+    color: #65727d;
+}
+
+@media (max-width: 600px) {
+    .analysis-section,
+    .chat-section {
+        padding: 16px;
+    }
+
+    .chat-message.user {
+        max-width: 95%;
+    }
+}
+

@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Player Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>Chess Player Explorer</h1>
+        <p>Explore Chess.com player profiles, ratings, and recent games.</p>
+
+        <form id="searchForm">
+            <input
+                id="username"
+                type="text"
+                placeholder="Enter Chess.com username"
+                required
+            >
+            <button type="submit">Search</button>
+        </form>
+
+        <p id="status" role="status"></p>
+        <label for="gameLimit">Games to analyze:</label>
+        <select id="gameLimit">
+            <option value="10" selected>Last 10 games</option>
+            <option value="50">Last 50 games</option>
+            <option value="100">Last 100 games</option>
+            <option value="1000">Last 1000 games</option>
+            <option value="all">All games</option>
+        </select>
+        <section id="results"></section>
+        <section id="coachStats"></section>
+        <section id="aiAnalysisSection" class="analysis-section">
+    <h2>Chess Coaching Report</h2>
+        <div id="aiAnalysis" class="report-content">
+            Your coaching report will appear here.
+        </div>
+    </section>
+
+    <section id="followUpSection" class="chat-section">
+        <h2>Ask Your Chess Coach</h2>
+        <p class="chat-description">
+            Ask follow-up questions about your games, weaknesses,
+            openings, or training plan.
+        </p>
+
+        <div id="chatMessages" class="chat-messages"
+            aria-live="polite">
+            <p class="chat-placeholder">
+            </p>
+        </div>
+
+        <form id="chatForm" class="chat-form">
+            <textarea
+                id="chatInput"
+                placeholder="e.g. What should I focus on to improve my rapid rating?"
+                rows="3"
+                required
+            ></textarea>
+
+            <div class="chat-actions">
+                <span id="chatStatus" role="status"></span>
+                <button id="chatSubmit" type="submit">
+                    Ask Coach
+                </button>
+            </div>
+        </form>
+    </section>
+        <section id="games"></section>
+    </main>
+</body>
+</html>
