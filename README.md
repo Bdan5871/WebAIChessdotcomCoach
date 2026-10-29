@@ -45,6 +45,7 @@ An LLM-powered chess analysis and coaching web application that uses Chess.com's
    ```
 
 3. If dependencies are not already listed in package.json, install the backend packages:
+
 ```npm install express @google/genai dotenv
 ```
 
@@ -52,11 +53,9 @@ An LLM-powered chess analysis and coaching web application that uses Chess.com's
 
 4. Ensure your backend loads environment variables and uses the configured Gemini model. For example, server.js can begin with:
 
-import "dotenv/config";
+`import "dotenv/config";`
 
 Keep your API key on the server. Never commit .env or expose the key in client-side code.
-
-5. Start the application using the command appropriate for your project setup.
 
 ## Configuration
 
@@ -66,11 +65,13 @@ Store API keys and other secrets in environment variables. Never commit `.env` o
 
 If package.json defines a start script for server.js, run:
 
-`npm start`
+```npm start
+```
 
 Otherwise, start the server directly:
 
-`node server.js`
+```node server.js
+```
 
 Open `http://localhost:3000` in your browser, provided the Express server is configured to serve the frontend files on that port.
 
