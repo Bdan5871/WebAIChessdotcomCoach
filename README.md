@@ -43,7 +43,7 @@ An LLM-powered chess analysis and coaching web application that uses Chess.com's
    ```bash
    npm install
    ```
-   This project was designed on Mac OS. On a windows system it may be necessary to run the following command before `npm install`
+   This project was designed on Mac OS. On a windows system it may be necessary to run the following command before `npm install`.
    ```bash
    Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
    ```
@@ -86,7 +86,7 @@ Open `http://localhost:3000` in your browser, provided the Express server is con
 
 1. Start the application.
 2. Enter a valid Chess.com username.
-3. Select the number of games to review.
+3. Select the number of games to review. If the number of games chosen is 1,000 or ALL the AI is only fed the last 100 in order to avoid payload overload errors.
 4. View player statistics, game results, and AI generated feedback.
 5. Request additional insights from AI coach by continuing the conversation in the text box.
 
