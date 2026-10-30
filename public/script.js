@@ -304,6 +304,7 @@ async function updateGameStatistics()
         recentGames: coachData.recentGames.slice(0, 100),
         aiSampleSize: Math.min(coachData.sampleSize, 100)
     };
+    
 
     return {
         coachData,
