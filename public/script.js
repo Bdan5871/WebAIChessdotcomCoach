@@ -100,11 +100,11 @@ form.addEventListener("submit", async function(event)
 
         results.appendChild(card);
         
-        const coachData = await updateGameStatistics();
+        const {coachData, aiCoachData} = await updateGameStatistics();
 
         status.textContent = "Generating AI coaching report...";
 
-        const analysis = await getAIChessAnalysis(coachData);
+        const analysis = await getAIChessAnalysis(aiCoachData);
 
         originalCoachReport = analysis;
         chatHistory = [];
@@ -132,10 +132,15 @@ document.getElementById("gameLimit").addEventListener(
 
         try 
         {
-            const coachData = await updateGameStatistics();
-            const analysis = await getAIChessAnalysis(coachData);
+            const {coachData, aiCoachData} = await updateGameStatistics();
+            const analysis = await getAIChessAnalysis(aiCoachData);
 
-            document.getElementById("aiAnalysis").textContent = analysis;
+            originalCoachReport = analysis;
+            chatHistory = [];
+
+            chatMessages.replaceChildren();
+
+            renderMarkdown(aiAnalysis, analysis);
 
             status.textContent = "Coaching analysis updated.";
         } 
@@ -292,10 +297,18 @@ async function updateGameStatistics()
     const coachData = buildCoachData(activeUsername, activeStats, games);
 
     displayCoachStats(coachData);
-
     displayGames(games.slice(0, 10));
 
-    return coachData;
+    const aiCoachData = {
+        ...coachData,
+        recentGames: coachData.recentGames.slice(0, 100),
+        aiSampleSize: Math.min(coachData.sampleSize, 100)
+    };
+
+    return {
+        coachData,
+        aiCoachData
+    };
 }
 
 
@@ -423,7 +436,10 @@ function buildCoachData(username, stats, games)
 
             return [label, {
                 currentRating: data.last?.rating ?? null,
-                peakRating: data.best?.rating ?? null,
+                peakRating: Math.max(
+                    data.best?.rating ?? 0,
+                    data.last?.rating ?? 0
+                ) || null,
                 wins: record.win ?? 0,
                 losses: record.loss ?? 0,
                 draws: record.draw ?? 0,

@@ -43,6 +43,10 @@ An LLM-powered chess analysis and coaching web application that uses Chess.com's
    ```bash
    npm install
    ```
+   This project was designed on Mac OS. On a windows system it may be necessary to run the following command before `npm install`
+   ```bash
+   Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+   ```
 
 3. If dependencies are not already listed in package.json, install the backend packages:
 
